@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Notes App</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>📝 Notes</h1>
+                <button id="btn-new-note" class="btn btn-primary">+ New Note</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search notes..." />
+            </div>
+            <ul id="notes-list" class="notes-list"></ul>
+        </aside>
+
+        <main class="editor-panel">
+            <div id="empty-state" class="empty-state">
+                <p>Select a note or create a new one</p>
+            </div>
+            <div id="note-editor" class="note-editor hidden">
+                <div class="editor-header">
+                    <input type="text" id="note-title" placeholder="Note title..." />
+                    <div class="editor-actions">
+                        <button id="btn-save" class="btn btn-primary">Save</button>
+                        <button id="btn-delete" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+                <textarea id="note-content" placeholder="Write your note here..."></textarea>
+            </div>
+        </main>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
